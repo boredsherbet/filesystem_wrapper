@@ -34,4 +34,6 @@ class Browser:
             print(f"{depth}{directory.name}")
             directory.tree_contents(depth + " ")
 
-    # TODO: add a search
+    def search(self, name):
+        # TODO: add a search
+        pass

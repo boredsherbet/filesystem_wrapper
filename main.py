@@ -11,24 +11,27 @@ def main():
             f"(filesystem_wrapper) {browser.current_dir.os_path}>>>"
         ).split()
         command = user_input[0]
+        args = user_input[1:] if len(user_input) > 1 else None
         if command == "tree":
-            pass
-        elif command == "ls":
             pass
         elif command == "pwd":
             pass
-        elif command == "cd":
-            pass
         elif command == "exit":
             break
-        elif command == "rm":
+        elif command == "ls":
             pass
-        elif command == "find":
+        elif command == "cd" and args is not None:
             pass
-        elif command == "touch":
+        elif command == "rm" and args is not None:
             pass
-        elif command == "mkdir":
+        elif command == "find" and args is not None:
             pass
+        elif command == "touch" and args is not None:
+            pass
+        elif command == "mkdir" and args is not None:
+            pass
+        else:
+            print("Please use a valid command")
     print(f"Returning you to {os.getcwd()}")
     print("Thank you for using filesystem_wrapper.")
 
